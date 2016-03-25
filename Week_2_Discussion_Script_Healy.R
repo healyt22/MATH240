@@ -20,6 +20,7 @@ elim_1 = eye
 
 elim_1[2, 1] = -2
 elim_1[3, 1] = -3
+elim_1
 
 dat = elim_1 %*% dat
 print(dat)
@@ -34,6 +35,8 @@ dat2[3,] = dat[2,]
 
 elim_2 = eye
 elim_2[1, 2] = -2
+elim_2
+
 dat2 = elim_2 %*% dat2
 print(dat2)
 
@@ -44,6 +47,7 @@ print(dat2)
 elim_3 = eye
 elim_3[1, 3] = 1
 elim_3[2, 3] = -2
+elim_3
 
 dat3 = dat2
 dat3 = elim_3 %*% dat3
