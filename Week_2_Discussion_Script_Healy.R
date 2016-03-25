@@ -1,11 +1,10 @@
-
-
 ## x + 2y + 3z = 1
 ## 2x + 4y +7z = 2
 ## 3x + 7y +11z = 8
 
 ## First we set a 3X3 identity matrix to be used for our eliminations
 eye = diag(3)
+eye
 
 ## Construct a 3X4 matrix containing our numbers
 dat = matrix(
@@ -13,6 +12,7 @@ dat = matrix(
     nrow = 3, 
     ncol = 4
 )
+dat
 
 ## First elimination: -2 * 1st row added to the second row, -3 * 1st row added to third row
 ## Matrix multiplication to eliminate
@@ -38,7 +38,7 @@ dat2 = elim_2 %*% dat2
 print(dat2)
 
 
-## Lastly we perform our second elimination: add third row to first row, -2 * third row added to
+## Lastly we perform our third elimination: add third row to first row, -2 * third row added to
 ## second
 ## Matrix multiplication and voila, we have our answer in the matrix dat3
 elim_3 = eye
