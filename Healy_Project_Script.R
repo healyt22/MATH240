@@ -1,9 +1,7 @@
-setwd("/Users/TimHealy/Google Drive/MATH 240/Week 8")
-setwd("C:/Users/thealy/Documents/MATH 240/MATH240")
+setwd("~/Repos/MATH240")
 
 library(plyr)
 library(reshape2)
-library(Quandl)
 
 crime_dat = read.csv("BPD_Part_1_Victim_Based_Crime_Data.csv")
 crime_dat = ddply(crime_dat, c("Neighborhood", "Description"), summarise, Crimes = sum(Total.Incidents))
